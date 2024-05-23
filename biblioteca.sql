@@ -19,15 +19,16 @@ INSERT INTO livros (id, titulo, autor, editora, ano_publicacao, isbn) VALUES (1,
 INSERT INTO livros (id, titulo, autor, editora, ano_publicacao, isbn) VALUES (2, 'O Hobbit', 'J.R.R. Tolkien', 'Evertype', 1937, '9781782010913');
 INSERT INTO livros (id, titulo, autor, editora, ano_publicacao, isbn) VALUES (3, 'Harry Potter e a Pedra Filosofal', 'J. K. Rowling', 'Bloomsbury', 2001, '9789654487658');
 INSERT INTO livros (id, titulo, autor, editora, ano_publicacao, isbn) VALUES (4, 'A Arte da Guerra', 'Sunzi bing fa', 'Barnes & Noble', 1994, '9781566192989');
-INSERT INTO livros (id, titulo, autor, editora, ano_publicacao, isbn) VALUES (10, 'O Pequeno Princípe', 'Matheus Ronaldo', 'Globo', 1996, '1231243124');
+INSERT INTO livros (id, titulo, autor, editora, ano_publicacao, isbn) VALUES (10, 'O Pequeno PrincÃ­pe', 'Matheus Ronaldo', 'Globo', 1996, '1231243124');
 
 -- Table: usuarios
 CREATE TABLE IF NOT EXISTS usuarios (                id INTEGER PRIMARY KEY,                nome TEXT,                sobrenome TEXT,                endereco TEXT,                email TEXT,                telefone TEXT);
 INSERT INTO usuarios (id, nome, sobrenome, endereco, email, telefone) VALUES (1, 'Gustavo', 'Carvalho', 'Rua das Bolinhas, 123', 'gustavocarvalho123@gmail.com', '(21) 96485-0884');
-INSERT INTO usuarios (id, nome, sobrenome, endereco, email, telefone) VALUES (2, 'Roberto', 'Afonso', 'Rua das Lagoas, 456', 'robertoafonso@gmail.com', '(22) 95643-5744');
+INSERT INTO usuarios (id, nome, sobrenome, endereco, email, telefone) VALUES (2, 'Augusto', 'Freitas', 'Rua das Lagoas, 456', 'augustofreitas@gmail.com', '(22) 95643-5744');
 INSERT INTO usuarios (id, nome, sobrenome, endereco, email, telefone) VALUES (3, 'Ronaldo', 'Nobre', 'Rua do Palacio, 756', 'nobre@gmail.com', '(21) 3123-4151');
 INSERT INTO usuarios (id, nome, sobrenome, endereco, email, telefone) VALUES (4, 'Isabela', 'Souza', 'Rua das Flores, 134', 'isabela@gmail.com', '(21) 3233-4121');
 INSERT INTO usuarios (id, nome, sobrenome, endereco, email, telefone) VALUES (5, 'Laura', 'Morais', 'Rua Girassol, 56', 'laura@gmail.com', '(21) 3412-4145');
+INSERT INTO usuarios (id, nome, sobrenome, endereco, email, telefone) VALUES (5, 'Gabriel', 'Carvalho', 'Rua Outrange, 55', 'gabriel@gmail.com', '(21) 3412-4145');
 
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
