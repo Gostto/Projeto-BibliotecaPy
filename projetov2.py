@@ -5,6 +5,43 @@ from tkinter import simpledialog
 from defprojeto import * # import das funções
 # from PIL import Image, ImageTk # biblioteca de import de imagens
 
+def connect():
+    conn = sqlite3.connect('biblioteca.db')
+    return conn
+
+#Função para criar as tabelas do banco de dados (se não tiver)
+def create_tables():
+    conn = connect()
+    cursor = conn.cursor()
+    cursor.execute('CREATE TABLE IF NOT EXISTS livros (\
+                id INTEGER PRIMARY KEY,\
+                titulo TEXT,\
+                autor TEXT,\
+                editora TEXT,\
+                ano_publicacao INTEGER,\
+                isbn TEXT)')
+
+# Criar uma tabela para os usuarios
+    cursor.execute('CREATE TABLE IF NOT EXISTS usuarios (\
+                id INTEGER PRIMARY KEY,\
+                nome TEXT,\
+                sobrenome TEXT,\
+                endereco TEXT,\
+                email TEXT,\
+                telefone TEXT)')
+
+# Criar uma tabela para os emprestimos
+    cursor.execute('CREATE TABLE IF NOT EXISTS emprestimos (\
+                id INTEGER PRIMARY KEY,\
+                id_livro INTEGER,\
+                id_usuario INTEGER,\
+                data_emprestimo TEXT,\
+                data_devolucao TEXT,\
+                FOREIGN KEY(id_livro) REFERENCES livros(id),\
+                FOREIGN KEY(id_usuario) REFERENCES usuarios(id))')
+
+    conn.commit()
+    conn.close()
 
 #Janela principal
 janela = tk.Tk()
