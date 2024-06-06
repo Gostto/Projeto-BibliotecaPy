@@ -21,7 +21,7 @@ def create_tables():
                 ano_publicacao INTEGER,\
                 isbn TEXT)')
 
-# Criar uma tabela para os usuarios
+# Criação da tabela para os usuarios
     cursor.execute('CREATE TABLE IF NOT EXISTS usuarios (\
                 id INTEGER PRIMARY KEY,\
                 nome TEXT,\
@@ -30,7 +30,7 @@ def create_tables():
                 email TEXT,\
                 telefone TEXT)')
 
-# Criar uma tabela para os emprestimos
+# Criação da tabela para os emprestimos
     cursor.execute('CREATE TABLE IF NOT EXISTS emprestimos (\
                 id INTEGER PRIMARY KEY,\
                 id_livro INTEGER,\
@@ -51,7 +51,6 @@ janela.geometry("350x400")
 janela.grid_columnconfigure(0,weight=1) #Centralizado 
 janela.grid_rowconfigure(0, weight=1)
 
-#Chamada dos frames
 frames = {}
 def show_frame(frame):
     frame.tkraise()
