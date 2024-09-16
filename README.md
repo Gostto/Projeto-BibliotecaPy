@@ -1,4 +1,4 @@
-# Projeto - 📖 Sistema de Biblioteca em Python
+#📖 Sistema de Biblioteca em Python
 
 O desenvolvimento deste projeto envolve a criação de uma aplicação de sistema de gerenciamento de biblioteca utilizando Python com o módulo Tkinter para a interface gráfica e SQLite como sistema de gestão de banco de dados.
 
